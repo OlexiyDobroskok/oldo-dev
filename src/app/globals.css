@@ -23,7 +23,11 @@
 }
 
 @layer base {
+  * {
+    @apply box-border;
+  }
+
   body {
-    @apply bg-background text-foreground;
+    @apply min-h-svh bg-background text-foreground;
   }
 }
