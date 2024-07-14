@@ -19,5 +19,5 @@ export const mapRange = (
   const outputRange = outputUpper - outputLower;
 
   return (value: number) =>
-    outputLower + (((value - inputLower) * inputRange) / outputRange || 0);
+    outputLower + (((value - inputLower) / inputRange) * outputRange || 0);
 };
