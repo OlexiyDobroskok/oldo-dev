@@ -1,6 +1,8 @@
 import type { Metadata } from 'next';
 import { Arsenal } from 'next/font/google';
 
+import { Logo } from '@shared/ui/logo';
+import { PageTransition } from '@shared/ui/page-transition';
 import { DesktopNavigation } from '@widgets/navigation-menu';
 
 import { SmoothScrollProvider } from './_providers';
@@ -27,13 +29,17 @@ export default function RootLayout({
     <html lang="en">
       <body className={arsenalFont.className}>
         <SmoothScrollProvider>
-          <header className="flex items-center px-8 py-4">
-            <div>logo</div>
+          <header className="flex h-[4.5rem] items-center px-8 py-4">
+            <div>
+              <Logo />
+            </div>
             <div className="ml-auto">
               <DesktopNavigation />
             </div>
           </header>
-          {children}
+          <div className="min-h-without-header">
+            <PageTransition>{children}</PageTransition>
+          </div>
         </SmoothScrollProvider>
       </body>
     </html>
