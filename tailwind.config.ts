@@ -20,6 +20,9 @@ const config: Config = {
           foreground: 'hsl(var(--accent-foreground))',
         },
       },
+      height: {
+        'min-h-without-header': 'calc(100svh - 4.5rem)',
+      },
     },
   },
   plugins: [],
