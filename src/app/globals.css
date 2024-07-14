@@ -3,17 +3,27 @@
 @tailwind utilities;
 
 :root {
-  --background: 255 255 255;
-  --foreground: 0 00;
+  --background: 53 31% 95%;
+  --foreground: 60 4% 11%;
   --primary: 0 0 0;
   --primary-foreground: 0 0 0;
+  --accent: 224 100% 77%;
+  --accent-foreground: 225 100 100;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: 255 255 255;
-    --foreground: 0 0 0;
+    --background: 53 31% 95%;
+    --foreground: 60 4% 11%;
     --primary: 0 0 0;
     --primary-foreground: 0 0 0;
+    --accent: 224 100% 77%;
+    --accent-foreground: 225 100 100;
+  }
+}
+
+@layer base {
+  body {
+    @apply bg-background text-foreground;
   }
 }
