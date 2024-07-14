@@ -1,10 +1,9 @@
 'use client';
 
-import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { AnimatePresence, motion } from 'framer-motion';
 
-import { useStickyMouseEvent } from '@shared/framer-motion';
+import { MotionLink, useStickyMouseEvent } from '@shared/framer-motion';
 import { cn } from '@shared/utils';
 
 import { menuRoutes } from '../config/menu-routes';
@@ -30,8 +29,6 @@ interface NavItemProps {
   href: string;
   isActive: boolean;
 }
-
-const MotionLink = motion(Link);
 
 export function NavItem({ title, href, isActive }: NavItemProps) {
   const { x, y, handleMouseMove, handleMouseLeave } = useStickyMouseEvent(10);
