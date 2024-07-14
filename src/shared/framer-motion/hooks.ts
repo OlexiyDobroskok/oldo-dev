@@ -5,7 +5,9 @@ import { type MotionValue, useMotionValue } from 'framer-motion';
 
 import { mapRange } from '@shared/utils';
 
-export const useStickyMouseEvent = (movementScale:number = 1): {
+export const useStickyMouseEvent = (
+  movementScale: number = 1,
+): {
   x: MotionValue<number>;
   y: MotionValue<number>;
   handleMouseMove: (event: MouseEvent<HTMLElement>) => void;
