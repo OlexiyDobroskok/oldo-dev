@@ -1,11 +1,17 @@
 import type { Metadata } from 'next';
-import { Inter } from 'next/font/google';
+import { Arsenal } from 'next/font/google';
+
+import { DesktopNavigation } from '@widgets/navigation-menu';
 
 import { SmoothScrollProvider } from './_providers';
 
 import './globals.css';
 
-const inter = Inter({ subsets: ['latin'] });
+const arsenalFont = Arsenal({
+  weight: ['400', '700'],
+  subsets: ['latin', 'cyrillic'],
+  display: 'swap',
+});
 
 export const metadata: Metadata = {
   title: 'Create Next App',
@@ -19,8 +25,16 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className}>
-        <SmoothScrollProvider>{children}</SmoothScrollProvider>
+      <body className={arsenalFont.className}>
+        <SmoothScrollProvider>
+          <header className="flex items-center px-8 py-4">
+            <div>logo</div>
+            <div className="ml-auto">
+              <DesktopNavigation />
+            </div>
+          </header>
+          {children}
+        </SmoothScrollProvider>
       </body>
     </html>
   );
