@@ -5,8 +5,8 @@
 :root {
   --background: 53 31% 95%;
   --foreground: 60 4% 11%;
-  --primary: 0 0 0;
-  --primary-foreground: 0 0 0;
+  --primary: 60 4% 11%;
+  --primary-foreground: 210 40% 98%;
   --accent: 224 100% 77%;
   --accent-foreground: 225 100 100;
 }
@@ -15,8 +15,8 @@
   :root {
     --background: 53 31% 95%;
     --foreground: 60 4% 11%;
-    --primary: 0 0 0;
-    --primary-foreground: 0 0 0;
+    --primary: 60 4% 11%;
+    --primary-foreground: 210 40% 98%;
     --accent: 224 100% 77%;
     --accent-foreground: 225 100 100;
   }
