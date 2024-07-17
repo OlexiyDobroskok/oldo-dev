@@ -36,7 +36,7 @@ export function NavItem({ title, href, isActive }: NavItemProps) {
   return (
     <motion.li>
       <MotionLink
-        className="relative block px-2 py-0.5 text-lg capitalize transition-transform"
+        className="relative block px-2 py-0.5 text-lg capitalize transition-transform duration-75"
         onMouseMove={handleMouseMove}
         onMouseLeave={handleMouseLeave}
         style={{ x, y }}
