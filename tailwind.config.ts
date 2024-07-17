@@ -34,10 +34,17 @@ const config: Config = {
         scroll: {
           to: { transform: 'translateX(calc(-50% - 0.5rem))' },
         },
+        'smooth-x': {
+          from: {
+            transform: 'translateX(calc(4rem * 1.4 * var(--_index, 1)))',
+          },
+          to: { transform: 'translateX(0)' },
+        },
       },
       animation: {
         scroll:
           'scroll var(--_scroll-duration, 20s) var(--_scroll-direction, reverse) linear infinite',
+        'smooth-x': 'smooth-x 1s cubic-bezier(0.22, 1, 0.36, 1)',
       },
     },
   },
