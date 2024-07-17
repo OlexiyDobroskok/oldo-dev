@@ -1,9 +1,12 @@
 import type { Metadata } from 'next';
 import { Arsenal } from 'next/font/google';
 
+import { Socials } from '@entities/socials';
+import { SideMenuModal } from '@features/side-menu-modal';
+import { SideModalLayout } from '@shared/ui/layouts/side-modal-layout';
 import { Logo } from '@shared/ui/logo';
 import { PageTransition } from '@shared/ui/page-transition';
-import { DesktopNavigation } from '@widgets/navigation-menu';
+import { DesktopNavigation, MobileNavigation } from '@widgets/navigation-menu';
 
 import { SmoothScrollProvider } from './_providers';
 
@@ -28,6 +31,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={arsenalFont.className}>
+        <div id="modal"></div>
         <SmoothScrollProvider>
           <header className="flex h-[4.5rem] items-center px-8 py-4">
             <div>
@@ -41,6 +45,16 @@ export default function RootLayout({
             <PageTransition>{children}</PageTransition>
           </div>
         </SmoothScrollProvider>
+        <div>
+          <SideMenuModal
+            layoutSlot={
+              <SideModalLayout
+                navMenuSlot={<MobileNavigation />}
+                socialSlot={<Socials />}
+              />
+            }
+          />
+        </div>
       </body>
     </html>
   );
