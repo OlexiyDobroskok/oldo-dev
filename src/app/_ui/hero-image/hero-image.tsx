@@ -4,8 +4,8 @@ import Image from 'next/image';
 import { motion, useScroll, useTransform } from 'framer-motion';
 
 export function HeroImage({ className }: { className: string }) {
-  const { scrollYProgress } = useScroll();
-  const y = useTransform(scrollYProgress, [0, 1], ['0px', '1000px']);
+  const { scrollY } = useScroll();
+  const y = useTransform(scrollY, [0, 1000], ['0px', '300px']);
 
   return (
     <motion.div className={className} style={{ y }}>
