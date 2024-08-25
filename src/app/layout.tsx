@@ -5,7 +5,6 @@ import { Socials } from '@entities/socials';
 import { SideMenuModal } from '@features/side-menu-modal';
 import { SideModalLayout } from '@shared/ui/layouts/side-modal-layout';
 import { Logo } from '@shared/ui/logo';
-import { PageTransition } from '@shared/ui/page-transition';
 import { DesktopNavigation, MobileNavigation } from '@widgets/navigation-menu';
 
 import { SmoothScrollProvider } from './_providers';
@@ -41,9 +40,7 @@ export default function RootLayout({
               <DesktopNavigation />
             </div>
           </header>
-          <div className="min-h-without-header">
-            <PageTransition>{children}</PageTransition>
-          </div>
+          <div className="min-h-without-header">{children}</div>
         </SmoothScrollProvider>
         <div>
           <SideMenuModal
