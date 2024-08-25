@@ -1,5 +1,7 @@
-import { HeroImage } from './_ui/hero-image';
-import { ScrollTitle } from './_ui/scroll-title';
+import { HeroImage } from 'src/app/_ui/hero-image';
+import { ScrollTitle } from 'src/app/_ui/scroll-title';
+
+import { TextInner } from '@shared/framer-motion';
 
 export default function HomePage() {
   return (
@@ -16,6 +18,16 @@ export default function HomePage() {
         </div>
         <HeroImage className="absolute right-0 top-0 h-without-header w-7/12" />
       </section>
+      <div className="flex min-h-[50vh] w-2/3 items-center">
+        <TextInner
+          className="py-5 ps-32 text-3xl leading-normal"
+          withIndent
+          text="I specialize in turning your business
+          ideas into fully functional, visually appealing web interfaces.
+          Let's bring your concepts to life with cutting edge frontend
+          technologies."
+        />
+      </div>
     </main>
   );
 }
